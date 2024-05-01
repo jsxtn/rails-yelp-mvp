@@ -12,17 +12,17 @@
 
 ActiveRecord::Schema[7.1].define(version: 2024_05_01_143336) do
   create_table "restaurants", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "phone_number"
-    t.string "category"
+    t.string "name", null: false
+    t.string "address", null: false
+    t.string "phone_number", null: false
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
-    t.string "content"
+    t.integer "rating", null: false
+    t.text "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
